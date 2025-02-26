@@ -15,8 +15,9 @@ const adjustHeight = () => {
       console.log(event.origin)
     })
 
-    const _iframe = document.querySelector('iframe')
-    console.log(_iframe)
+    const iframe = document.querySelector("iframe").contentWindow;
+
+    iframe.document.querySelector("body").style.backgroundColor = "blue";
   })
 }
 </script>
