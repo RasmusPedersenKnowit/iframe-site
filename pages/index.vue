@@ -9,7 +9,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <iframe ref="iframe" src="https://iframe.rsmsp.dk/iframe" frameborder="0" height="100%" width="100%" />
+    <iframe ref="iframe" src="https://iframe.rsmsp.dk/__iframe.html" frameborder="0" height="100%" width="100%" />
   </div>
 </template>
 
