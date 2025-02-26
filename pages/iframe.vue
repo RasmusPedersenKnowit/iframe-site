@@ -6,6 +6,11 @@ onMounted(() => {
     window.postMessage({ height }, '*');
   })
 
+  window.onload = () => {
+    const height = document.body.scrollHeight;
+    window.postMessage({ height }, '*');
+  }
+
   window.addEventListener('load', () => {
     const height = document.body.scrollHeight;
     window.postMessage({ height }, '*');
