@@ -1,7 +1,7 @@
 <script setup lang="ts">
 onMounted(() => {
   window.addEventListener("load", () => {
-    console.log("loaded")
+    console.log('🤖', "resize")
     window.parent.postMessage(
         { scrollHeight: document.body.scrollHeight + 'px' },
         "*"
@@ -9,7 +9,15 @@ onMounted(() => {
   });
 
   window.addEventListener("resize", () => {
-    console.log("resize")
+    console.log('🤖', "resize")
+    window.parent.postMessage(
+        { scrollHeight: document.body.scrollHeight + 'px' },
+        "*"
+    );
+  });
+
+  addEventListener("DOMContentLoaded", () => {
+    console.log('DomContentLoaded', event);
     window.parent.postMessage(
         { scrollHeight: document.body.scrollHeight + 'px' },
         "*"
