@@ -255,20 +255,20 @@
 <script>
     window.onload = () => {
         const height = document.body.scrollHeight;
-        window.postMessage({ windowHeight : height }, 'https://iframe.rsmsp.dk');
+        window.postMessage({ windowHeight : height }, 'https://*.rsmsp.dk');
         console.log('iframe onload');
     }
 
     function sendMessage(){
         const height = document.body.scrollHeight;
-        window.postMessage({ windowHeight : height }, 'https://iframe.rsmsp.dk');
-        console.log('iframe onload');
+        window.postMessage({ windowHeight : height }, 'https://*.rsmsp.dk');
+        console.log('iframe sendMessage');
     }
 
     function clicker(){
         const height = document.body.scrollHeight;
         console.log('windowHeight', height)
-        window.postMessage({ windowHeight : height }, 'https://iframe.rsmsp.dk');
+        window.postMessage({ windowHeight : height }, 'https://*.rsmsp.dk');
     }
 </script>
 </body>
