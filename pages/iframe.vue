@@ -1,5 +1,5 @@
 <script setup lang="ts">
-onMounted(() => {
+/*onMounted(() => {
   window.addEventListener('load', () => {
     console.log('⌛️', 'loaded')
     const height = document.body.scrollHeight;
@@ -20,6 +20,16 @@ function onClick(){
 
   console.log('click', height)
   window.parent.postMessage({ height }, '*');
+}*/
+
+function clicker(){
+  console.log("clicker")
+  if (window && window.parent) {
+    console.log('IM HERE')
+    window.parent.postMessage({message: 'The message is being set up here', hide: 'dbhchat', show: 'dbhchat'}, '*');
+  }
+
+  window.parent.postMessage({ test : 0 }, '*');
 }
 </script>
 
@@ -29,7 +39,7 @@ function onClick(){
       <h1>Testing display of HTML elements</h1>
       <p>This is the document <code>header</code></p>
     </header>
-    <button @click="onClick">CLICK ME</button>
+    <button @click="clicker">CLICK ME</button>
     <main>
       <article aria-label="headings">
         <h1>This is 1st level heading</h1>
@@ -84,11 +94,6 @@ function onClick(){
           <li> Three. Well, probably this list item should be longer so that it will probably wrap to the next line in rendering.</li>
         </menu>
         <p>The following is a <code>dir</code> list:</p>
-        <dir>
-          <li> One.</li>
-          <li> Two.</li>
-          <li> Three. Well, probably this list item should be longer so that it will probably wrap to the next line in rendering.</li>
-        </dir>
         <p>
           This is a paragraph before a <strong>numbered</strong> list (<code>ol</code>). Note that the spacing between a paragraph and a list before or after that is hard to tune in a user style sheet. You can't guess which paragraphs are logically related to a list, e.g. as a "list header".
         </p>
@@ -114,30 +119,7 @@ function onClick(){
       </article>
       <article>
         <h2>Text-level markup, in alphabetical order</h2>
-        <ul>
-          <li> <abbr title="Cascading Style Sheets">CSS</abbr> (an abbreviation;
-            <code>abbr</code> markup used)</li>
-          <li> <acronym title="radio detecting and ranging">radar</acronym> (an acronym; <code>acronym</code> markup used)</li>
-          <li> <b>bolded</b> (<code>b</code> markup used - just bolding with unspecified semantics)</li>
-          <li> <cite>Origin of Species</cite> (a book title; <code>cite</code> markup used)</li>
-          <li> <code>a[i] = b[i] + c[i);</code> (computer code; <code>code</code> markup used)</li>
-          <li> here we have some <del>deleted</del> text (<code>del</code> markup used)</li>
-          <li> an <dfn>octet</dfn> is an entity consisting of eight bits (<code>dfn</code> markup used for the term being defined)</li>
-          <li> this is <em>very</em> simple (<code>em</code> markup used for emphasizing a word)</li>
-          <li> <i lang="la">Homo sapiens</i> (should appear in italics;  <code>i</code> markup used)</li>
-          <li> here we have some <ins>inserted</ins> text (<code>ins</code> markup used)</li>
-          <li> type <kbd>yes</kbd> when prompted for an answer (<code>kbd</code> markup used for text indicating keyboard input)</li>
-          <li> <q>Hello!</q> (<code>q</code> markup used for quotation)</li>
-          <li> He said: <q>She said <q>Hello!</q></q> (a quotation inside a quotation)</li>
-          <li> you may get the message <samp>Core dumped</samp> at times (<code>samp</code> markup used for sample output)</li>
-          <li> <small>this is not that important</small> (<code>small</code> markup used)</li>
-          <li> <strike>overstruck</strike> (<code>strike</code> markup used; note: <code>s</code> is a nonstandard synonym for <code>strike</code>)</li>
-          <li> <strong>this is highlighted text</strong> (<code>strong</code> markup used)</li>
-          <li> In order to test how subscripts and superscripts (<code>sub</code> and <code>sup</code> markup) work inside running text, we need some dummy text around constructs like x<sub>1</sub> and H<sub>2</sub>O (where subscripts occur). So here is some fill so that you will (hopefully) see whether and how badly the subscripts and superscripts mess up vertical spacing between lines.  Now superscripts: M<sup>lle</sup>, 1<sup>st</sup>, and then some mathematical notations: e<sup>x</sup>, sin<sup>2</sup> <i>x</i>, and some nested superscripts (exponents) too: e<sup>x<sup>2</sup></sup> and f(x)<sup>g(x)<sup>a+b+c</sup></sup> (where 2 and a+b+c should appear as exponents of exponents).</li>
-          <li> <tt>text in monospace font</tt> (<code>tt</code> markup used)</li>
-          <li> <u>underlined</u> text (<code>u</code> markup used)</li>
-          <li> the command <code>cat</code> <var>filename</var> displays the file specified by the <var>filename</var> (<code>var</code> markup used to indicate a word as a variable).</li>
-        </ul>
+
         <p>
           Some of the elements tested above are typically displayed in a monospace font, often using the <em>same</em> presentation for all of them. This tests whether that is the case on your browser:
         </p>
@@ -145,7 +127,6 @@ function onClick(){
           <li> <code>This is sample text inside code markup</code></li>
           <li> <kbd>This is sample text inside kbd markup</kbd></li>
           <li> <samp>This is sample text inside samp markup</samp></li>
-          <li> <tt>This is sample text inside tt markup</tt></li>
         </ul>
         <h2>Links</h2>
         <ul>
