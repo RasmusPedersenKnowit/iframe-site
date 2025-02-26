@@ -25,13 +25,12 @@ onMounted(() => {
 })
 
 function clicker(){
-  console.log("clicker")
-  if (window && window.parent) {
-    console.log('IM HERE')
-    window.parent.postMessage({message: 'The message is being set up here', hide: 'dbhchat', show: 'dbhchat'}, '*');
-  }
+  const height = document.body.scrollHeight;
+  window.postMessage({ height }, '*');
+}
 
-  window.parent.postMessage({ test : 0 }, '*');
+window.onload = () => {
+  console.log('iframe page LOAD')
 }
 </script>
 
