@@ -19,7 +19,7 @@ onMounted(() => {
 <template>
   <div style="height: 600px; border: 1px orange solid; padding: 1rem">
     <h1>Page: SECOND</h1>
-    <NuxtLink to="/">Second page</NuxtLink>
+    <a href="/">Second page</a>
   </div>
 </template>
 

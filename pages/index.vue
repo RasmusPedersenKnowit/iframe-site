@@ -8,6 +8,14 @@ onMounted(() => {
     );
   });
 
+  window.addEventListener("load", () => {
+    console.log('🤖', "loaded")
+    window.parent.postMessage(
+        { scrollHeight: document.documentElement.scrollHeight + 'px' },
+        "*"
+    );
+  });
+
   window.addEventListener("resize", () => {
     console.log('🤖', "resize")
     window.parent.postMessage(
@@ -29,7 +37,7 @@ onMounted(() => {
 <template>
   <div style="height: 800px; border: 1px orange solid; padding: 1rem">
     <h1>Page: index</h1>
-    <NuxtLink to="/second">Second page</NuxtLink>
+    <a href="/second">Second page</a>
   </div>
 </template>
 
