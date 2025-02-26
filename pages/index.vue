@@ -1,8 +1,9 @@
 <script setup lang="ts">
-const iframe = useTemplateRef('iframe')
+const iframe = ref(null)
 const adjustHeight = () => {
   console.log('iframe', iframe.value)
-  console.log('contentWindow', iframe.value.contentWindow)
+  console.log('contentWindow', iframe.value.contentWindow.document.body.scrollHeight)
+
   if(iframe.value) {
     iframe.value.style.height = (iframe.value.contentWindow.document.body.scrollHeight + 256) + 'px';
   }
