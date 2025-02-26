@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         contentSecurityPolicy: {
             'frame-src': ['*'],
             'frame-ancestors': ['*'],
-            'script-src': ['*']
+            'script-src': ["*", "'unsafe-inline'"]
         },
         crossOriginResourcePolicy: 'cross-origin',
     }
