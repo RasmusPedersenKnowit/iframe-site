@@ -1,5 +1,5 @@
 <script setup lang="ts">
-/*onMounted(() => {
+onMounted(() => {
   window.addEventListener('load', () => {
     console.log('⌛️', 'loaded')
     const height = document.body.scrollHeight;
@@ -7,20 +7,17 @@
   })
 
   window.addEventListener('load', () => {
+    const height = document.body.scrollHeight;
+    window.postMessage({ height }, '*');
     console.log('iframe page LOAD')
   })
 
   window.addEventListener('DOMContentLoaded', () => {
+    const height = document.body.scrollHeight;
+    window.postMessage({ height }, '*');
     console.log('iframe page DOMContentLoaded')
   })
 })
-
-function onClick(){
-  const height = document.body.scrollHeight;
-
-  console.log('click', height)
-  window.parent.postMessage({ height }, '*');
-}*/
 
 function clicker(){
   console.log("clicker")
