@@ -6,9 +6,10 @@ export default defineNuxtConfig({
   security: {
     headers: {
         contentSecurityPolicy: {
-            'frame-src': ['*']
+            'frame-src': ['*'],
+            'frame-ancestors': ['*']
         },
-        crossOriginResourcePolicy: 'same-site'
+        crossOriginResourcePolicy: 'cross-origin',
     }
   }
 })
