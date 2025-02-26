@@ -2,25 +2,25 @@
 onMounted(() => {
   window.onload = () => {
     const height = document.body.scrollHeight;
-    window.postMessage({ windowHeight : height }, 'https://iframe.rsmsp.dk');
+    window.postMessage({ windowHeight : height }, 'https://messsage.rsmsp.dk');
     console.log('iframe onload');
   }
 
   window.addEventListener('load', () => {
     const height = document.body.scrollHeight;
-    window.postMessage({ windowHeight : height }, 'https://iframe.rsmsp.dk');
+    window.postMessage({ windowHeight : height }, 'https://messsage.rsmsp.dk');
     console.log('iframe page load')
   })
 
   window.addEventListener('DOMContentLoaded', () => {
     const height = document.body.scrollHeight;
-    window.postMessage({ windowHeight : height }, 'https://iframe.rsmsp.dk');
+    window.postMessage({ windowHeight : height }, 'https://messsage.rsmsp.dk');
     console.log('iframe page DOMContentLoaded')
   })
 
   setTimeout(() => {
     const height = document.body.scrollHeight;
-    window.postMessage({ windowHeight : height }, 'https://iframe.rsmsp.dk');
+    window.postMessage({ windowHeight : height }, 'https://messsage.rsmsp.dk');
     console.log('❌')
   }, 1000)
 
@@ -29,7 +29,7 @@ onMounted(() => {
 function clicker(){
   const height = document.body.scrollHeight;
   console.log('windowHeight', height)
-  window.postMessage({ windowHeight : height }, 'https://iframe.rsmsp.dk');
+  window.postMessage({ windowHeight : height }, 'https://messsage.rsmsp.dk');
 }
 </script>
 
