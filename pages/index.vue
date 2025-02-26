@@ -8,19 +8,19 @@ const adjustHeight = () => {
   if(iframe.value) {
     iframe.value.style.height = (iframe.value.contentWindow.document.body.scrollHeight + 256) + 'px';
   }
-
-  onMounted(() => {
-    window.addEventListener('message', (event) => {
-      console.log('🤖message', event)
-      console.log(event.origin)
-    })
-
-    window.addEventListener('load', () => {
-      console.log('main page LOAD')
-    })
-
-  })
 }
+
+onMounted(() => {
+  window.addEventListener('message', (event) => {
+    console.log('🤖message', event)
+    console.log(event.origin)
+  })
+
+  window.addEventListener('load', () => {
+    console.log('main page LOAD')
+  })
+
+})
 </script>
 
 <template>
