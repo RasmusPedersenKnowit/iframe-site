@@ -4,13 +4,12 @@ onMounted(() => {
     console.log('🤖message', event.data)
     console.log(event.origin)
   })
-
 })
 </script>
 
 <template>
   <div>
-    <iframe ref="iframe" src="https://iframe.rsmsp.dk/iframe" frameborder="0" height="100%" width="100%" />
+    <iframe ref="iframe" src="/iframe" frameborder="0" height="100%" width="100%" />
   </div>
 </template>
 

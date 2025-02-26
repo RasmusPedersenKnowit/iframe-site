@@ -1,35 +1,35 @@
 <script setup lang="ts">
 onMounted(() => {
-  const height = document.body.scrollHeight;
-  window.postMessage({ height }, '*');
-
-  window.addEventListener('load', () => {
-    console.log('⌛️', 'loaded')
-    const height = document.body.scrollHeight;
-    window.postMessage({ height }, '*');
-  })
-
   window.onload = () => {
     const height = document.body.scrollHeight;
-    window.postMessage({ height }, '*');
+    window.postMessage({ windowHeight : height }, '*');
+    console.log('iframe onload');
   }
 
   window.addEventListener('load', () => {
     const height = document.body.scrollHeight;
-    window.postMessage({ height }, '*');
-    console.log('iframe page LOAD')
+    window.postMessage({ windowHeight : height }, '*');
+    console.log('iframe page load')
   })
 
   window.addEventListener('DOMContentLoaded', () => {
     const height = document.body.scrollHeight;
-    window.postMessage({ height }, '*');
+    window.postMessage({ windowHeight : height }, '*');
     console.log('iframe page DOMContentLoaded')
   })
+
+  setTimeout(() => {
+    const height = document.body.scrollHeight;
+    window.postMessage({ windowHeight : height }, '*');
+    console.log('❌')
+  }, 1000)
+
 })
 
 function clicker(){
   const height = document.body.scrollHeight;
-  window.postMessage({ height }, '*');
+  console.log('windowHeight', height)
+  window.postMessage({ windowHeight : height }, '*');
 }
 </script>
 
