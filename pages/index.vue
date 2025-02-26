@@ -24,7 +24,7 @@ const adjustHeight = () => {
 
 <template>
   <div>
-    <iframe ref="iframe" src="https://iframe.rsmsp.dk/iframe.html" @load="adjustHeight" frameborder="0" height="100%" width="100%" />
+    <iframe ref="iframe" src="https://iframe.rsmsp.dk/iframe" @load="adjustHeight" frameborder="0" height="100%" width="100%" />
   </div>
 </template>
 
