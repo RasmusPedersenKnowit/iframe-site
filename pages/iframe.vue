@@ -1,5 +1,8 @@
 <script setup lang="ts">
 onMounted(() => {
+  const height = document.body.scrollHeight;
+  window.postMessage({ height }, '*');
+
   window.addEventListener('load', () => {
     console.log('⌛️', 'loaded')
     const height = document.body.scrollHeight;
@@ -27,10 +30,6 @@ onMounted(() => {
 function clicker(){
   const height = document.body.scrollHeight;
   window.postMessage({ height }, '*');
-}
-
-window.onload = () => {
-  console.log('iframe page LOAD')
 }
 </script>
 
