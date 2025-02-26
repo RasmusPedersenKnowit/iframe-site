@@ -17,7 +17,9 @@ onMounted(() => {
 
 function onClick(){
   const height = document.body.scrollHeight;
-  window.postMessage({ height }, '*');
+
+  console.log('click', height)
+  window.parent.postMessage({ height }, '*');
 }
 </script>
 
