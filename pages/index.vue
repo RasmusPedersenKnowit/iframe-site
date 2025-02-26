@@ -8,6 +8,12 @@ const adjustHeight = () => {
   if(iframe.value) {
     iframe.value.style.height = (iframe.value.contentWindow.document.body.scrollHeight + 256) + 'px';
   }
+
+  onMounted(() => {
+    window.addEventListener('message', (event) => {
+      console.log('🤖message', event)
+    })
+  })
 }
 </script>
 

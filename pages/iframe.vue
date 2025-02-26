@@ -1,4 +1,10 @@
 <script setup lang="ts">
+onMounted(() => {
+  window.addEventListener('load', () => {
+    const height = document.body.scrollHeight;
+    window.parent.postMessage({ height }, '*');
+  })
+})
 </script>
 
 <template>
