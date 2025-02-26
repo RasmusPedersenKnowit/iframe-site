@@ -3,13 +3,13 @@ onMounted(() => {
   window.addEventListener('load', () => {
     console.log('⌛️', 'loaded')
     const height = document.body.scrollHeight;
-    window.parent.postMessage({ height }, '*');
+    window.postMessage({ height }, '*');
   })
 })
 
 function onClick(){
   const height = document.body.scrollHeight;
-  window.parent.postMessage({ height }, '*');
+  window.postMessage({ height }, '*');
 }
 </script>
 
