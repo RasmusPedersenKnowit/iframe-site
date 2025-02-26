@@ -15,7 +15,7 @@ onMounted(() => {
   setTimeout(() => {
     postMessage('setTimeout')
     console.log('❌')
-  }, 1000)
+  }, 50)
 
 })
 
