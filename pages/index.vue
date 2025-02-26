@@ -5,7 +5,7 @@ onMounted(() => {
   window.addEventListener('message', (event) => {
     console.log('🤖message', event.data)
     if(!iframe.value) return
-    iframe.value.style.height = event.data.windowHeight + 'px'
+    iframe.value.style.height = (event.data.windowHeight + 32) + 'px'
   })
 })
 </script>
