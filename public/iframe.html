@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<iframe
+        ref="iframe"
+        class="border-none"
+        height="100%"
+        src="https://iframe.rsmsp.dk/test.html"
+        width="100%"
+/>
+<script>
+    window.addEventListener('message', (event) => {
+        console.log('🟢', event)
+        console.log('🔴', event.data)
+    }, false)
+</script>
+
+</body>
+</html>
+
