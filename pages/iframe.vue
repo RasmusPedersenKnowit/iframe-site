@@ -6,6 +6,11 @@ onMounted(() => {
     window.parent.postMessage({ height }, '*');
   })
 })
+
+function onClick(){
+  const height = document.body.scrollHeight;
+  window.parent.postMessage({ height }, '*');
+}
 </script>
 
 <template>
@@ -14,6 +19,7 @@ onMounted(() => {
       <h1>Testing display of HTML elements</h1>
       <p>This is the document <code>header</code></p>
     </header>
+    <button @click="onClick">CLICK ME</button>
     <main>
       <article aria-label="headings">
         <h1>This is 1st level heading</h1>

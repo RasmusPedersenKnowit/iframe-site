@@ -14,6 +14,9 @@ const adjustHeight = () => {
       console.log('🤖message', event)
       console.log(event.origin)
     })
+
+    const _iframe = document.querySelector('iframe')
+    console.log(_iframe)
   })
 }
 </script>
