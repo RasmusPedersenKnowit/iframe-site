@@ -12,6 +12,7 @@ const adjustHeight = () => {
   onMounted(() => {
     window.addEventListener('message', (event) => {
       console.log('🤖message', event)
+      console.log(event.origin)
     })
   })
 }
