@@ -31,7 +31,7 @@ function postMessage(placement = ''){
 </script>
 
 <template>
-  <div style="background: white; padding: 32px">
+  <div style="background: lightcyan; padding: 32px">
     <header>
       <h1>Testing display of HTML elements</h1>
       <p>This is the document <code>header</code></p>
