@@ -5,13 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-<div style="height: 800px; border: 1px orange solid; padding: 1rem">
-    <h1>Page: index</h1>
-    <a href="/second">Second page</a>
+<div style="height: 600px; border: 1px orange solid; padding: 1rem">
+    <h1>Page: Second</h1>
+    <a href="/">index page</a>
 </div>
 <script>
     window.addEventListener("load", () => {
-        const mes =    window.parent.postMessage("test", "*")
+        window.parent.postMessage({ scrollHeight: document.body.scrollHeight + 'px' },, "*")
         console.log('🔴', mes)
     })
 
