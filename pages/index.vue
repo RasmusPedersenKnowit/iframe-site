@@ -1,7 +1,11 @@
 <script setup lang="ts">
+const iframe = useTemplateRef('iframe')
+
 onMounted(() => {
   window.addEventListener('message', (event) => {
     console.log('🤖message', event.data)
+    if(!iframe.value) return
+    iframe.value.style.height = event.data.windowHeight + 'px'
   })
 })
 </script>
