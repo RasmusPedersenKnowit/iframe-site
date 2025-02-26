@@ -5,6 +5,14 @@ onMounted(() => {
     const height = document.body.scrollHeight;
     window.postMessage({ height }, '*');
   })
+
+  window.addEventListener('load', () => {
+    console.log('iframe page LOAD')
+  })
+
+  window.addEventListener('DOMContentLoaded', () => {
+    console.log('iframe page DOMContentLoaded')
+  })
 })
 
 function onClick(){
