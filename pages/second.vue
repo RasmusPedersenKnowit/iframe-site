@@ -1,15 +1,33 @@
 <script setup lang="ts">
 onMounted(() => {
   window.addEventListener("load", () => {
+    console.log('🤖', "resize")
     window.parent.postMessage(
-        { scrollHeight: document.body.scrollHeight },
+        { scrollHeight: document.body.scrollHeight + 'px' },
+        "*"
+    );
+  });
+
+  window.addEventListener("load", () => {
+    console.log('🤖', "loaded")
+    window.parent.postMessage(
+        { scrollHeight: document.documentElement.scrollHeight + 'px' },
         "*"
     );
   });
 
   window.addEventListener("resize", () => {
+    console.log('🤖', "resize")
     window.parent.postMessage(
-        { scrollHeight: document.body.scrollHeight },
+        { scrollHeight: document.body.scrollHeight + 'px' },
+        "*"
+    );
+  });
+
+  addEventListener("DOMContentLoaded", () => {
+    console.log('DomContentLoaded', event);
+    window.parent.postMessage(
+        { scrollHeight: document.body.scrollHeight + 'px' },
         "*"
     );
   });
