@@ -11,8 +11,10 @@
 </div>
 <script>
     window.addEventListener("load", () => {
-        window.parent.postMessage({ scrollHeight: document.body.scrollHeight + 'px' }, "*")
-    })
+        const message = { scrollHeight: document.body.scrollHeight + 'px' };
+        console.log('📤 Sending message:', message);
+        window.parent.postMessage(message, "*");
+    });
 </script>
 </body>
 </html>

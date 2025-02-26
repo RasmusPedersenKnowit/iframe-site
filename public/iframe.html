@@ -14,9 +14,9 @@
 />
 <script>
     window.addEventListener('message', (event) => {
-        console.log('🟢', event)
-        console.log('🔴', event.data)
-    }, false)
+        console.log('🟢 Message received from:', event.origin);
+        console.log('🔴 Data:', event.data);
+    }, false);
 </script>
 
 </body>
