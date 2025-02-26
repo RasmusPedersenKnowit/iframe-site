@@ -2,7 +2,7 @@
 onMounted(() => {
   window.addEventListener('message', (event) => {
     console.log('🤖message', event.data)
-    console.log(event.origin)
+    console.log('😈', event.origin)
   })
 })
 </script>
