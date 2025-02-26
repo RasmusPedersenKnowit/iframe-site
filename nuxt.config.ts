@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     headers: {
         contentSecurityPolicy: {
             'frame-src': ['*'],
-            'frame-ancestors': ['*']
+            'frame-ancestors': ['*'],
+            'script-src': ['*']
         },
         crossOriginResourcePolicy: 'cross-origin',
     }
